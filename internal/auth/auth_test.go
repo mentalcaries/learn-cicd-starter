@@ -25,7 +25,7 @@ func TestGetApiKey(t *testing.T) {
 
   tests := []test{
     { name: "Valid Api Key",input: h1, wantKey: "abc123", wantErr: false},
-    { name: "Empty Api Key", input: h2, wantKey: "", wantErr: false},
+    { name: "Empty Api Key", input: h2, wantKey: "", wantErr: true},
     { name: "Authorization Header Absemt", input: h3, wantKey: "", wantErr: true},
   }
 
