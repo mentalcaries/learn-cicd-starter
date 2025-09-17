@@ -25,8 +25,8 @@ type apiConfig struct {
 var staticFiles embed.FS
 
 func unused() {
-    // this function does nothing
-    // and is called nowhere
+	// this function does nothing
+	// and is called nowhere
 }
 
 func main() {
@@ -41,7 +41,6 @@ func main() {
 	}
 
 	apiCfg := apiConfig{}
-
 
 	// https://github.com/libsql/libsql-client-go/#open-a-connection-to-sqld
 	// libsql://[your-database].turso.io?authToken=[your-auth-token]
