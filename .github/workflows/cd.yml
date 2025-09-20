@@ -14,16 +14,17 @@ jobs:
 
       - name: Set up go
         uses: actions/setup-go@v5
-    
+
       - name: Install Goose CLI
         run: |
-            mkdir -p /home/runner/.local/bin
-            curl -fsSL https://github.com/block/goose/releases/download/stable/download_cli.sh \
-              | CONFIGURE=false INSTALL_PATH=/home/runner/.local/bin bash
-            echo "/home/runner/.local/bin" >> $GITHUB_PATH
+          mkdir -p /home/runner/.local/bin
+          curl -fsSL https://github.com/block/goose/releases/download/stable/download_cli.sh \
+            | CONFIGURE=false INSTALL_PATH=/home/runner/.local/bin bash
+          echo "/home/runner/.local/bin" >> $GITHUB_PATH
 
       - name: Install Turso
-        run: curl -sSfL https://get.tur.so/install.sh | bash   
+        run: curl -sSfL https://get.tur.so/install.sh | bash \
+          echo "/home/runner/.turso" >> $GITHUB_PATH
 
       - name: Build app
         run: ./scripts/buildprod.sh
