@@ -24,7 +24,7 @@ jobs:
 
       - name: Install Turso
         run: curl -sSfL https://get.tur.so/install.sh | bash \
-          echo "/home/runner/.turso" >> $GITHUB_PATH
+          echo "/home/runner/.turso/bin" >> $GITHUB_PATH
 
       - name: Build app
         run: ./scripts/buildprod.sh
