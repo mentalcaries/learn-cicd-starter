@@ -22,6 +22,9 @@ jobs:
               | CONFIGURE=false INSTALL_PATH=/home/runner/.local/bin bash
             echo "/home/runner/.local/bin" >> $GITHUB_PATH
 
+      - name: Install Goose
+        run: curl -sSfL https://get.tur.so/install.sh | bash
+            
       - name: Build app
         run: ./scripts/buildprod.sh
 
