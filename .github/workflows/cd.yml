@@ -22,13 +22,6 @@ jobs:
               | CONFIGURE=false INSTALL_PATH=/home/runner/.local/bin bash
             echo "/home/runner/.local/bin" >> $GITHUB_PATH
 
-      - name: Configure Goose
-        run: |
-            mkdir -p ~/.config/goose
-            cat <<EOF > ~/.config/goose/config.yaml
-            keyring: false
-            EOF
-
       - name: Build app
         run: ./scripts/buildprod.sh
 
